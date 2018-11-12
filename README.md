@@ -9,3 +9,52 @@ In this example, we will provision HDInsight Spark and dependencies in US East 2
 Create a resource group.<br>
 ![Create USE2 RG](images/1-create-rg.png)
 <br><br>
+
+### 1.0.2. Provision a virtual network in the resource group
+![Create vnet 1](images/2-provision-vnet-1.png)
+<br><br>
+![Create vnet 2](images/2-provision-vnet-2.png)
+<br><br>
+![Create vnet 3](images/2-provision-vnet-3.png)
+<br><br>
+![Create vnet 4](images/2-provision-vnet-4.png)
+<br><br>
+![Create vnet 5](images/2-provision-vnet-5.png)
+<br><br>
+![Create vnet 6](images/2-provision-vnet-6.png)
+<br><br>
+![Create vnet 7](images/2-provision-vnet-7.png)
+<br><br>
+
+
+### 1.0.3. Provision HDInsight Spark in the resource group to use the Vnet
+![Create hdi 1](images/3-provision-hdi-1.png)
+<br><br>
+![Create hdi 2](images/3-provision-hdi-2.png)
+<br><br>
+![Create hdi 3](images/3-provision-hdi-3.png)
+<br><br>
+![Create hdi 4](images/3-provision-hdi-4.png)
+<br><br>
+![Create hdi 5](images/3-provision-hdi-5.png)
+<br><br>
+![Create hdi 6](images/3-provision-hdi-6.png)
+<br><br>
+![Create hdi 7](images/3-provision-hdi-7.png)
+<br><br>
+![Create hdi 8](images/3-provision-hdi-8.png)
+<br><br>
+![Create hdi 9](images/3-provision-hdi-9.png)
+<br><br>
+![Create hdi 10](images/3-provision-hdi-10.png)
+<br><br>
+![Create hdi 11](images/3-provision-hdi-11.png)
+<br><br>
+![Create hdi 12](images/3-provision-hdi-12.png)
+<br><br>
+![Create hdi 13](images/3-provision-hdi-13.png)
+<br><br>
+![Create hdi 14](images/3-provision-hdi-14.png)
+<br><br>
+![Create hdi 15](images/3-provision-hdi-15.png)
+<br><br>
