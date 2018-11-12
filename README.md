@@ -136,6 +136,29 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 
 ### 3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's
 
+![Create vnet-peer-5](images/4-global-vnet-peering-5.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-6](images/4-global-vnet-peering-6.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-7](images/4-global-vnet-peering-7.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-8](images/4-global-vnet-peering-8.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-9](images/4-global-vnet-peering-9.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-10](images/4-global-vnet-peering-10.png)
+<br><br>
+<hr>
 
 ## 4.  Prep for distcp
 
