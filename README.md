@@ -14,6 +14,15 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 - [3.0.1. Peer the primary datacenter's vnet to the secondary datacenter's vnet](README.md#301-peer-the-primary-datacenters-vnet-to-the-secondary-datacenters)
 - [3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's vnet](README.md#302-peer-the-secondary-datacenters-vnet-to-the-primary-datacenters)
 
+[4.  Attach storage accounts for data to each cluster](README.md#4--attach-storage-accounts-for-data-to-each-custer)<br><br>
+- [4.1. Create storage account and attach to primary cluster, test it](README.md#41-create-storage-account-and-attach-to-primary-cluster-test-it)
+-- [4.1.1. Create storage account](README.md#411-create-storage-account)
+-- [4.1.2. Attach the storage account to the cluster with a HDInsight script action](README.md#412-attach-the-storage-account-to-the-cluster-with-a-hdinsight-script-action)
+-- [4.1.3. Create storage containers in the storage account](README.md#413-create-storage-containers-in-the-storage-account)
+-- [4.1.4. Test the access to the storage container from HDFS CLI on HDInsight-Spark](README.md#414-test-the-access-to-the-storage-container-from-hdfs-cli-on-hdinsight-spark)
+
+-[4.2. Create storage account and attach to secondary cluster, test it](README.md#42-create-storage-account-and-attach-to-secondary-cluster-test-it)
+
 ## 1.  Primary datacenter - USEast2 - setup
 
 ### 1.0.1. Provision resource group in USEast2
