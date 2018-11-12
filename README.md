@@ -259,13 +259,13 @@ This concludes the test for attching the storage account, creating containers an
 ### 4.2. Create storage account and attach to secondary cluster, test it
 Repeat the steps in 4.1 in the secondary datacenter resource group and cluster.  Once completed, we can test the replication.
 
-## 5.  Execute replication to DR cluster with distcp
+## 5.  distcp replication to DR - basics from the command line 
 ### 5.1. Dependency
 The secondary datacenter data storage account needs to be attached to the primary datacenter cluster via a script action.
 Follow steps detailed in the earlier sections to attach the secondary datacenter data store account to the primary datacenter HDI cluster.  
 
 
-### 5.2. Execute distcp
+### 5.2. Execute distcp - basics
 The command:
 ```
 sshuser@hn0-hdispa:~$ hadoop distcp wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/ wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/
@@ -348,8 +348,10 @@ hdfs dfs -ls wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/
 ```
 
 Output:
+```
 Found 1 items
 -rw-r--r--   1 sshuser supergroup         12 2018-11-12 22:04 wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/sampleFile.txt
+```
 
 ## 7. Other considerations
 
