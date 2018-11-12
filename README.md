@@ -173,7 +173,17 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 <br><br>
 <hr>
 
-##### 4.1.2. Attach to the cluster
+Navigate to your storage account on the portal.  You will need the storage account keys for attaching to the cluster.
+![Create sa-5](images/5-create-storage-5.png)
+<br><br>
+<hr>
+
+Capture the account name and key.
+![Create sa-6](images/5-create-storage-6.png)
+<br><br>
+<hr>
+
+##### 4.1.2. Attach the storage account to the cluster
 ![Create sa-3](images/5-create-storage-3.png)
 <br><br>
 <hr>
@@ -182,16 +192,7 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 <br><br>
 <hr>
 
-Navigate to your storage account on the portal.  You will need the storage account keys for attaching to the cluster.
-![Create sa-5](images/5-create-storage-5.png)
-<br><br>
-<hr>
-
-![Create sa-6](images/5-create-storage-6.png)
-<br><br>
-<hr>
-
-Paste the storage account name and key separated by a space and create the script action.
+Paste the storage account name and key from section 4.1.1, separated by a space and create the script action.
 ![Create sa-7](images/5-create-storage-7.png)
 <br><br>
 <hr>
