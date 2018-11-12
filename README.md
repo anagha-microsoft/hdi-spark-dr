@@ -73,7 +73,7 @@ Create a resource group.<br>
 <br><br>
 <hr>
 
-### 1.0.3. Connect to the HDInsight Spark cluster
+### 1.0.3. Connect to the HDInsight Spark cluster - Ambari cluster manager
 ![Create hdi 9](images/3-provision-hdi-9.png)
 <br><br>
 <hr>
@@ -90,6 +90,7 @@ Create a resource group.<br>
 <br><br>
 <hr>
 
+### 1.0.4. Connect to the HDInsight Spark cluster - via SSH
 ![Create hdi 13](images/3-provision-hdi-13.png)
 <br><br>
 <hr>
@@ -97,7 +98,6 @@ Create a resource group.<br>
 ![Create hdi 14](images/3-provision-hdi-14.png)
 <br><br>
 <hr>
-
 ![Create hdi 15](images/3-provision-hdi-15.png)
 <br><br>
 <hr>
