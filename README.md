@@ -13,6 +13,7 @@ Create a resource group.<br>
 ### 1.0.2. Provision a virtual network in the resource group
 ![Create vnet 1](images/2-provision-vnet-1.png)
 <br><br>
+<hr>
 ![Create vnet 2](images/2-provision-vnet-2.png)
 <br><br>
 ![Create vnet 3](images/2-provision-vnet-3.png)
