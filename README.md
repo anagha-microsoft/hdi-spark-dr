@@ -21,7 +21,7 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 -- [4.1.3. Create storage containers in the storage account](README.md#413-create-storage-containers-in-the-storage-account)<br>
 -- [4.1.4. Test the access to the storage container from HDFS CLI on HDInsight-Spark](README.md#414-test-the-access-to-the-storage-container-from-hdfs-cli-on-hdinsight-spark)<br>
 
--[4.2. Create storage account and attach to secondary cluster, test it](README.md#42-create-storage-account-and-attach-to-secondary-cluster-test-it)
+- [4.2. Create storage account and attach to secondary cluster, test it](README.md#42-create-storage-account-and-attach-to-secondary-cluster-test-it)
 
 ## 1.  Primary datacenter - USEast2 - setup
 
