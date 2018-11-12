@@ -162,7 +162,7 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 
 ## 4.  Attach storage accounts for data to each custer
 
-### 4.1. Create storage account and attach to primary cluster
+### 4.1. Create storage account and attach to primary cluster, test it
 
 ##### 4.1.1. Create storage account
 ![Create sa-1](images/5-create-storage-1.png)
@@ -219,6 +219,45 @@ Select the first option for attaching a storage account, and paste the storage a
 <br><br>
 <hr>
 
+##### 4.1.4. Test the access to the storage container from HDFS CLI on HDInsight-Spark
+
+
+
+1.  List the storage account contents for container "staging".  Replace with your storage account and container name, you should not not see anything returned.
+```
+hdfs dfs -ls wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/
+```
+2.  Create a file in local linux file system
+```
+echo "Sample file" > sampleFile.txt
+```
+3. Upload to HDFS
+```
+hdfs dfs -put sampleFile.txt wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/
+```
+4. List
+```
+hdfs dfs -ls wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/
+```
+You shoud see the file returned-
+```
+Found 1 items
+-rw-r--r--   1 sshuser supergroup         12 2018-11-12 19:06 wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/sampleFile.txt
+```
+
+5.  Open the file and view contents (for testing only)
+```
+hdfs dfs -cat wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/sampleFile.txt
+```
+You should see-
+```
+Sample file
+```
+
+This concludes the test for attching the storage account, creating containers and loading a file to HDFS.
+
+### 4.2. Create storage account and attach to secondary cluster, test it
+Repeat the steps in 4.1 in the secondary datacenter resource group and cluster.  Once completed, we can test the replication.
 
 ## 5.  Execute distcp
 
