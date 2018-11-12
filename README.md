@@ -14,8 +14,11 @@ Create a resource group.<br>
 ![Create vnet 1](images/2-provision-vnet-1.png)
 <br><br>
 <hr>
+
 ![Create vnet 2](images/2-provision-vnet-2.png)
 <br><br>
+<hr>
+
 ![Create vnet 3](images/2-provision-vnet-3.png)
 <br><br>
 ![Create vnet 4](images/2-provision-vnet-4.png)
