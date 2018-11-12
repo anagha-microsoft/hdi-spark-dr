@@ -3,6 +3,8 @@
 This sample covers DR for HDInsight Spark leveraging distcp.  In this example, we will provision HDInsight Spark and dependencies in US East 2 (primary) and US West 2 (secondary).  The following are steps to deploy and configure replication to DR.<br>
 
 **Table of contents**<br>
+[1.  Primary datacenter - USEast2 - setup]
+[1.0.1. Provision resource group in USEast2]
 [1.0.2. Provision a virtual network in the resource group](README.md#101-provision-resource-group-in-useast2)<br>
 [1.0.3. Provision HDInsight Spark in the resource group to use the Vnet](README.md#103-provision-hdinsight-spark-in-the-resource-group-to-use-the-vnet)<br>
 [1.0.4. Connect to the HDInsight Spark cluster - Ambari cluster manager](README.md#104-connect-to-the-hdinsight-spark-cluster---ambari-cluster-manager)<br>
