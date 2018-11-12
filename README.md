@@ -103,3 +103,9 @@ Create a resource group.<br>
 <br><br>
 <hr>
 
+## 2.  Secondary datacenter - USWest2 - setup
+
+Repeat the same steps in the secondary datacenter.<br>
+2.1. Create a resource group<br>
+2.2. Within the resource group, provision  virtual network with **address range that does not overlap with the virtual network in the primary datacenter**<br>
+2.3. Within the resource group, provision  HDInsight Spark within the virtual network created in 2.2
