@@ -1,7 +1,10 @@
 # HDInsight-Spark: Replication to DR datacenter on Azure with distcp - by example
 
-This sample covers DR for HDInsight Spark leveraging distcp.<br>
-In this example, we will provision HDInsight Spark and dependencies in US East 2 (primary) and US West 2 (secondary).  The following are steps to deploy and configure replication to DR.<br>
+This sample covers DR for HDInsight Spark leveraging distcp.  In this example, we will provision HDInsight Spark and dependencies in US East 2 (primary) and US West 2 (secondary).  The following are steps to deploy and configure replication to DR.<br>
+
+**Table of contents**<br>
+[1.0.2. Provision a virtual network in the resource group]
+(https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/README.md#101-provision-resource-group-in-useast2)
 
 ## 1.  Primary datacenter - USEast2 - setup
 
