@@ -4,11 +4,11 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 
 **Table of contents**<br>
 [1.  Primary datacenter - USEast2 - setup](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/README.md#1--primary-datacenter---useast2---setup)<br>
-[1.0.1. Provision resource group in USEast2](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/README.md#101-provision-resource-group-in-useast2)<br>
-[1.0.2. Provision a virtual network in the resource group](README.md#101-provision-resource-group-in-useast2)<br>
-[1.0.3. Provision HDInsight Spark in the resource group to use the Vnet](README.md#103-provision-hdinsight-spark-in-the-resource-group-to-use-the-vnet)<br>
-[1.0.4. Connect to the HDInsight Spark cluster - Ambari cluster manager](README.md#104-connect-to-the-hdinsight-spark-cluster---ambari-cluster-manager)<br>
-[1.0.5. Connect to the HDInsight Spark cluster - via SSH](README.md#105-connect-to-the-hdinsight-spark-cluster---via-ssh)
+- [1.0.1. Provision resource group in USEast2](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/README.md#101-provision-resource-group-in-useast2)<br>
+- [1.0.2. Provision a virtual network in the resource group](README.md#101-provision-resource-group-in-useast2)<br>
+- [1.0.3. Provision HDInsight Spark in the resource group to use the Vnet](README.md#103-provision-hdinsight-spark-in-the-resource-group-to-use-the-vnet)<br>
+- [1.0.4. Connect to the HDInsight Spark cluster - Ambari cluster manager](README.md#104-connect-to-the-hdinsight-spark-cluster---ambari-cluster-manager)<br>
+- [1.0.5. Connect to the HDInsight Spark cluster - via SSH](README.md#105-connect-to-the-hdinsight-spark-cluster---via-ssh)
 
 ## 1.  Primary datacenter - USEast2 - setup
 
