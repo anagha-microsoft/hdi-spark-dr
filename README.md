@@ -380,10 +380,7 @@ Found 1 items
 -rw-r--r--   1 sshuser supergroup         12 2018-11-12 22:04 wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/sampleFile.txt
 ```
 
-## 7. Other considerations
+## 6. References
 
-
-
-
-
+[distcp](https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html)
 
