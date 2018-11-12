@@ -23,6 +23,13 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 
 - [4.2. Create storage account and attach to secondary cluster, test it](README.md#42-create-storage-account-and-attach-to-secondary-cluster-test-it)
 
+
+[5. distcp replication to DR - basics from the command line](README.md#5--distcp-replication-to-dr---basics-from-the-command-line)<br>
+- [5.1. Dependency](README.md#51-dependency)<br>
+- [5.2. Execute distcp - basics](README.md#52-execute-distcp---basics)<br>
+- [5.3. Validate replication](README.md#53-validate-replication)<br>
+
+
 ## 1.  Primary datacenter - USEast2 - setup
 
 ### 1.0.1. Provision resource group in USEast2
