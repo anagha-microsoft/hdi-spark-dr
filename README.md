@@ -189,12 +189,12 @@ Naviate to the cluster on the Azure portal.
 <br><br>
 <hr>
 
-Click on script action.
+Click on script action, and submit new.
 ![Create sa-4](images/5-create-storage-4.png)
 <br><br>
 <hr>
 
-Paste the storage account name and key from section 4.1.1, separated by a space and create the script action.
+Select the first option for attaching a storage account, and paste the storage account name and key from section 4.1.1, separated by a space and create the script action.
 ![Create sa-7](images/5-create-storage-7.png)
 <br><br>
 <hr>
