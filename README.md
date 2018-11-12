@@ -259,9 +259,16 @@ This concludes the test for attching the storage account, creating containers an
 ### 4.2. Create storage account and attach to secondary cluster, test it
 Repeat the steps in 4.1 in the secondary datacenter resource group and cluster.  Once completed, we can test the replication.
 
-## 5.  Execute distcp
+## 5.  Execute replication to DR cluster with distcp
+### 5.1. Dependency
+The secondary datacenter data storage account needs to be attached to the primary datacenter cluster via a script action.
+Follow steps detailed in the earlier sections to attach the secondary datacenter data store account to the primary datacenter HDI cluster.  
 
-## 6. Validate replication
+
+### 5.2. Execute distcp
+
+
+### 5.3. Validate replication
 
 ## 7. Other considerations
 
