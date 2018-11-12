@@ -266,8 +266,13 @@ Follow steps detailed in the earlier sections to attach the secondary datacenter
 
 
 ### 5.2. Execute distcp
+The command:
 ```
 sshuser@hn0-hdispa:~$ hadoop distcp wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/ wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/
+```
+
+Output:
+```
 18/11/12 22:03:58 INFO tools.DistCp: Input Options: DistCpOptions{atomicCommit=false, syncFolder=false, deleteMissing=false, ignoreFailures=false, overwrite=false, append=false, useDiff=false, fromSnapshot=null, toSnapshot=null, skipCRC=false, blocking=true, numListstatusThreads=0, maxMaps=20, mapBandwidth=100, sslConfigurationFile='null', copyStrategy='uniformsize', preserveStatus=[], preserveRawXattrs=false, atomicWorkPath=null, logPath=null, sourceFileListing=null, sourcePaths=[wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/], targetPath=wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/, targetPathExists=true, filtersFile='null', verboseLog=false}
 18/11/12 22:03:58 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.9.0.20:10200
 18/11/12 22:03:59 INFO tools.SimpleCopyListing: Paths (files+dirs) cnt = 2; dirCnt = 1
@@ -336,6 +341,15 @@ sshuser@hn0-hdispa:~$ hadoop distcp wasbs://staging@hdisparkpdcdatasa.blob.core.
 		DIR_COPY=1
 ```
 ### 5.3. Validate replication
+
+On the DR cluster in the secondary datacenter, validate with file listing:
+```
+hdfs dfs -ls wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/
+```
+
+Output:
+Found 1 items
+-rw-r--r--   1 sshuser supergroup         12 2018-11-12 22:04 wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/sampleFile.txt
 
 ## 7. Other considerations
 
