@@ -11,6 +11,9 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 - [1.0.5. Connect to the HDInsight Spark cluster - via SSH](README.md#105-connect-to-the-hdinsight-spark-cluster---via-ssh)
 
 [2.  Secondary datacenter - USWest2 - setup](README.md#2--secondary-datacenter---uswest2---setup)<br>
+[3.  Global Vnet peering](README.md#3--global-vnet-peering)<br>
+- [3.0.1. Peer the primary datacenter's vnet to the secondary datacenter's vnet](README.md#301-peer-the-primary-datacenters-vnet-to-the-secondary-datacenters)
+- [3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's vnet](README.md#302-peer-the-secondary-datacenters-vnet-to-the-primary-datacenters)
 
 ## 1.  Primary datacenter - USEast2 - setup
 
