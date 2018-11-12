@@ -73,6 +73,7 @@ Create a resource group.<br>
 <br><br>
 <hr>
 
+### 1.0.3. Connect to the HDInsight Spark cluster
 ![Create hdi 9](images/3-provision-hdi-9.png)
 <br><br>
 <hr>
