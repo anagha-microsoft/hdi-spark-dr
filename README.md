@@ -10,6 +10,8 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 - [1.0.4. Connect to the HDInsight Spark cluster - Ambari cluster manager](README.md#104-connect-to-the-hdinsight-spark-cluster---ambari-cluster-manager)<br>
 - [1.0.5. Connect to the HDInsight Spark cluster - via SSH](README.md#105-connect-to-the-hdinsight-spark-cluster---via-ssh)
 
+[2.  Secondary datacenter - USWest2 - setup](README.md#2--secondary-datacenter---uswest2---setup)<br>
+
 ## 1.  Primary datacenter - USEast2 - setup
 
 ### 1.0.1. Provision resource group in USEast2
