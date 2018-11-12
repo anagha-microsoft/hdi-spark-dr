@@ -191,7 +191,8 @@ Navigate to your storage account on the portal.  You will need the storage accou
 <br><br>
 <hr>
 
-![Create sa-7(images/5-create-storage-7.png)
+Paste the storage account name and key separated by a space.
+![Create sa-7](images/5-create-storage-7.png)
 <br><br>
 <hr>
 
