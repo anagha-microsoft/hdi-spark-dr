@@ -160,7 +160,31 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 <br><br>
 <hr>
 
-## 4.  Prep for distcp
+## 4.  Attach storage accounts for data to each custer
+
+### 4.1. Create storage account and attach to primary cluster
+
+##### 4.1.1. Create storage account
+![Create sa-1](images/5-create-storage-1.png)
+<br><br>
+<hr>
+
+![Create sa-2](images/5-create-storage-2.png)
+<br><br>
+<hr>
+
+##### 4.1.2. Attach to the cluster
+![Create sa-3](images/5-create-storage-3.png)
+<br><br>
+<hr>
+
+![Create sa-4](images/5-create-storage-4.png)
+<br><br>
+<hr>
+
+![Create sa-5](images/5-create-storage-5.png)
+<br><br>
+<hr>
 
 
 ## 5.  Execute distcp
