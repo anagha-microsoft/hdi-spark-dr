@@ -199,6 +199,27 @@ Select the first option for attaching a storage account, and paste the storage a
 <br><br>
 <hr>
 
+![Create sa-8](images/5-create-storage-8.png)
+<br><br>
+<hr>
+
+##### 4.1.3. Create storage containers in the storage account
+
+![Create sa-9](images/5-create-storage-9.png)
+<br><br>
+<hr>
+
+
+![Create sa-10](images/5-create-storage-10.png)
+<br><br>
+<hr>
+
+
+![Create sa-11](images/5-create-storage-11.png)
+<br><br>
+<hr>
+
+
 ## 5.  Execute distcp
 
 ## 6. Validate replication
