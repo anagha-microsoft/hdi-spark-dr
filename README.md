@@ -98,6 +98,7 @@ Create a resource group.<br>
 ![Create hdi 14](images/3-provision-hdi-14.png)
 <br><br>
 <hr>
+
 ![Create hdi 15](images/3-provision-hdi-15.png)
 <br><br>
 <hr>
