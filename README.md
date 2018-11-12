@@ -182,6 +182,7 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 <br><br>
 <hr>
 
+Navigate to your storage account on the portal.  You will need the storage account keys for attaching to the cluster.
 ![Create sa-5](images/5-create-storage-5.png)
 <br><br>
 <hr>
