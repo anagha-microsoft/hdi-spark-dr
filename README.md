@@ -186,6 +186,13 @@ We will now peer the virtual networks of the primary and secondary datacenters.
 <br><br>
 <hr>
 
+![Create sa-6](images/5-create-storage-6.png)
+<br><br>
+<hr>
+
+![Create sa-7(images/5-create-storage-7.png)
+<br><br>
+<hr>
 
 ## 5.  Execute distcp
 
