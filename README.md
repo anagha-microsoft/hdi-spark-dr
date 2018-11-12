@@ -266,8 +266,75 @@ Follow steps detailed in the earlier sections to attach the secondary datacenter
 
 
 ### 5.2. Execute distcp
-
-
+```
+sshuser@hn0-hdispa:~$ hadoop distcp wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/ wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/
+18/11/12 22:03:58 INFO tools.DistCp: Input Options: DistCpOptions{atomicCommit=false, syncFolder=false, deleteMissing=false, ignoreFailures=false, overwrite=false, append=false, useDiff=false, fromSnapshot=null, toSnapshot=null, skipCRC=false, blocking=true, numListstatusThreads=0, maxMaps=20, mapBandwidth=100, sslConfigurationFile='null', copyStrategy='uniformsize', preserveStatus=[], preserveRawXattrs=false, atomicWorkPath=null, logPath=null, sourceFileListing=null, sourcePaths=[wasbs://staging@hdisparkpdcdatasa.blob.core.windows.net/], targetPath=wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/, targetPathExists=true, filtersFile='null', verboseLog=false}
+18/11/12 22:03:58 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.9.0.20:10200
+18/11/12 22:03:59 INFO tools.SimpleCopyListing: Paths (files+dirs) cnt = 2; dirCnt = 1
+18/11/12 22:03:59 INFO tools.SimpleCopyListing: Build file listing completed.
+18/11/12 22:03:59 INFO tools.DistCp: Number of paths in the copy list: 2
+18/11/12 22:03:59 INFO tools.DistCp: Number of paths in the copy list: 2
+18/11/12 22:03:59 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.9.0.20:10200
+18/11/12 22:03:59 INFO client.RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+18/11/12 22:03:59 INFO client.RequestHedgingRMFailoverProxyProvider: Found active RM [rm2]
+18/11/12 22:04:00 INFO mapreduce.JobSubmitter: number of splits:2
+18/11/12 22:04:00 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1542055752025_0005
+18/11/12 22:04:00 INFO impl.YarnClientImpl: Submitted application application_1542055752025_0005
+18/11/12 22:04:01 INFO mapreduce.Job: The url to track the job: http://hn1-hdispa.rkes4aowty3etktwegqs0cfvtg.cx.internal.cloudapp.net:8088/proxy/application_1542055752025_0005/
+18/11/12 22:04:01 INFO tools.DistCp: DistCp job-id: job_1542055752025_0005
+18/11/12 22:04:01 INFO mapreduce.Job: Running job: job_1542055752025_0005
+18/11/12 22:04:17 INFO mapreduce.Job: Job job_1542055752025_0005 running in uber mode : false
+18/11/12 22:04:17 INFO mapreduce.Job:  map 0% reduce 0%
+18/11/12 22:04:33 INFO mapreduce.Job:  map 50% reduce 0%
+18/11/12 22:04:35 INFO mapreduce.Job:  map 100% reduce 0%
+18/11/12 22:04:37 INFO mapreduce.Job: Job job_1542055752025_0005 completed successfully
+18/11/12 22:04:37 INFO mapreduce.Job: Counters: 39
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=338704
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=1204
+		WASB: Number of bytes written=0
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+		WASBS: Number of bytes read=12
+		WASBS: Number of bytes written=12
+		WASBS: Number of read operations=0
+		WASBS: Number of large read operations=0
+		WASBS: Number of write operations=0
+	Job Counters 
+		Launched map tasks=2
+		Other local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=58588
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=29294
+		Total vcore-milliseconds taken by all map tasks=29294
+		Total megabyte-milliseconds taken by all map tasks=29997056
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=0
+		Input split bytes=260
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=87
+		CPU time spent (ms)=3780
+		Physical memory (bytes) snapshot=649220096
+		Virtual memory (bytes) snapshot=8995217408
+		Total committed heap usage (bytes)=5294260224
+	File Input Format Counters 
+		Bytes Read=814
+	File Output Format Counters 
+		Bytes Written=0
+	org.apache.hadoop.tools.mapred.CopyMapper$Counter
+		BYTESCOPIED=12
+		BYTESEXPECTED=12
+		COPY=1
+		DIR_COPY=1
+```
 ### 5.3. Validate replication
 
 ## 7. Other considerations
