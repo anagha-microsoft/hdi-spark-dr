@@ -114,6 +114,21 @@ Repeat the same steps in the secondary datacenter.<br>
 
 We will now peer the virtual networks of the primary and secondary datacenters.
 ### 3.0.1. Peer the primary datacenter's vnet to the secondary datacenter's
+![Create vnet-peer-1](images/4-global-vnet-peering-1.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-2](images/4-global-vnet-peering-2.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-3](images/4-global-vnet-peering-3.png)
+<br><br>
+<hr>
+
+![Create vnet-peer-4](images/4-global-vnet-peering-4.png)
+<br><br>
+<hr>
 
 
 ### 3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's
