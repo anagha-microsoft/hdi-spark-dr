@@ -109,3 +109,27 @@ Repeat the same steps in the secondary datacenter.<br>
 2.1. Create a resource group<br>
 2.2. Within the resource group, provision  virtual network with **address range that does not overlap with the virtual network in the primary datacenter**<br>
 2.3. Within the resource group, provision  HDInsight Spark within the virtual network created in 2.2
+
+## 3.  Global Vnet peering
+
+We will now peer the virtual networks of the primary and secondary datacenters.
+### 3.0.1. Peer the primary datacenter's vnet to the secondary datacenter's
+
+
+### 3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's
+
+
+## 4.  Prep for distcp
+
+
+## 5.  Execute distcp
+
+## 6. Validate replication
+
+## 7. Other considerations
+
+
+
+
+
+
