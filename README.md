@@ -183,11 +183,13 @@ Capture the account name and key.
 <br><br>
 <hr>
 
-##### 4.1.2. Attach the storage account to the cluster
+##### 4.1.2. Attach the storage account to the cluster with a HDInsight script action
+Naviate to the cluster on the Azure portal.
 ![Create sa-3](images/5-create-storage-3.png)
 <br><br>
 <hr>
 
+Click on script action.
 ![Create sa-4](images/5-create-storage-4.png)
 <br><br>
 <hr>
