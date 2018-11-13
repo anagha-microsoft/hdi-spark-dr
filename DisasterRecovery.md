@@ -25,4 +25,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 
 ### 2.0.3.  Replication to DR - options
 
-
+#### 2.0.3.1. Active - Hot standby with dual ingest and processing
+![8-replicate-option1](images/8-option-1-active-dual-ingest.png)
+<br><br>
+<hr>
