@@ -13,6 +13,8 @@ The targeted duration of time and a service level within which a business proces
 A recovery point objective (RPO) is defined by business continuity planning. It is the maximum targeted period in which data might be lost from an IT service due to a major incident.<br><br>
 
 The RPO and RTO requirements (, and needless to say, your budget) drive the DR architecture for your HDInsight solution.
+<hr>
+
 
 ### 2.0.2.  What to replicate? 
 
