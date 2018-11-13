@@ -1,7 +1,7 @@
 # HDInsight-Spark - High Availability and Disaster Recovery
 
-High availability
-Disaster recovery
+[High availability](README.md#1--architectural-considerations-for-high-availability)<br>
+Disaster recovery<br>
 
 ## 1.  Architectural considerations for High Availability 
 
