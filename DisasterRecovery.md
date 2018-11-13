@@ -73,3 +73,9 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - WANdisco fusion supports automated metadata replication (sync) and data replication (async), scheduling, monitoring, alerting, bandwidth throttling and more
  - RPO => Lowest/None | RTO => Lowest/None | Cost => Highest | Effort => Lowest
 <hr>
+
+### 2.0.4.  Comparing the options
+![8-compare-1](images/8-comparing-1.png)
+<br><br>
+![8-compare-2](images/8-comparing-2.png)
+<hr>
