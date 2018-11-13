@@ -34,3 +34,13 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Synchronization tasks need to be run to ensure clusters are in sync
 - RPO => Low/None | RTO => None | Cost => High
 <hr>
+
+#### 2.0.3.2. Active - Cold standby with scheduled/batch replication to DR
+![8-replicate-option2](images/8-option-2-active-cold-standby.png)
+<br><br>
+- Applications write to active-primary ONLY
+- Replication to DR cluster is incremental, batch, scheduled
+- Synchronization tasks need to be run to ensure clusters are in sync
+- Its is not uncommon to have a storage dense, compute light DR cluster for cost optimization
+- RPO => Medium | RTO => Medium | Cost => High
+<hr>
