@@ -1,7 +1,14 @@
 # HDInsight-Spark - High Avaliability and Disaster Recovery
 
-1. [High availability](README.md#1--architectural-considerations-for-high-availability)<br>
-2. [Disaster recovery](DisasterRecovery.md)<br>
+[1. High availability](README.md#1--architectural-considerations-for-high-availability)<br>
+[2. Disaster recovery](DisasterRecovery.md)<br>
+- 2.0.1. What is your SLA for Disaster Recovery?
+- 2.0.2. What to replicate? 
+- 2.0.3. Replication to DR - options
+ - 2.0.3.1. Active - Hot standby with dual ingest and processing
+ - 2.0.3.2. Active - Cold standby with scheduled/batch replication to DR
+ - 2.0.3.3. Active - DR cluster provisioned on-demand/as needed
+ - 2.0.3.4. Active - Active with multi-master made possible by WANdisco
 
 ## 2.  Architectural considerations for Disaster Recovery
 
