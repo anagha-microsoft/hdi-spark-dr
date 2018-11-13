@@ -54,3 +54,13 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Synchronization tasks need to be run to ensure clusters are in sync
  - RPO => Highest | RTO => Highest | Cost => Lowest
 <hr>
+
+#### 2.0.3.4. Active - Active with multi-master made possible by WANdisco
+![8-replicate-option4](images/8-option-4-active-active.png)
+<br><br>
+- Applications/integration processes write to/read from nearest cluster clusters
+- Both clusters run identical batch jobs
+- Synchronization tasks need to be run to ensure clusters are in sync
+- WANdisco fusion supports automated metadata replication (sync) and data replication (async), scheduling, monitoring, alerting, bandwidth throttling and more
+ - RPO => Lowest | RTO => Lowest | Cost => Highest | Effort => Lowest
+<hr>
