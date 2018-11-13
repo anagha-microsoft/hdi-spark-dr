@@ -9,8 +9,9 @@
   - [2.0.3.2. Active - Cold standby with scheduled/batch replication to DR](DisasterRecovery.md#2032-active---cold-standby-with-scheduledbatch-replication-to-dr)
   - [2.0.3.3. Active - DR cluster provisioned on-demand/as needed](DisasterRecovery.md#2033-active---dr-cluster-provisioned-on-demandas-needed)
   - [2.0.3.4. Active - Active with multi-master made possible by WANdisco](DisasterRecovery.md#2034-active---active-with-multi-master-made-possible-by-wandisco)
-- [2.0.4. Comparing the options]()
-- [2.0.5. Replication tooling & considerations, specific to HDInsight] (DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
+- [2.0.4. Comparing the options](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/DisasterRecovery.md#204--comparing-the-options)
+- [2.0.5. Replication tooling & considerations, specific to HDInsight](DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
+  - [2.0.5.1. Active - Hot standby with dual ingest and processing](DisasterRecovery.md#2031-active---hot-standby-with-dual-ingest-and-processing)
 
 ## 2.  Architectural considerations for Disaster Recovery
 
