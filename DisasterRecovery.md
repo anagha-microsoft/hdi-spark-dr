@@ -125,7 +125,7 @@ The RPO and RTO requirements (and needless to say, your budget) drive the DR arc
 
 #### 2.0.6.1. Both datacenters on Azure
 1. Cross region commuication is over private IPs only.  
-2. Ensure there are no overlapping IP addresses across clusters/ddatacenters
+2. Ensure there are no overlapping IP addresses across clusters/datacenters
 3. Configure global Vnet peering
 <hr>
 
