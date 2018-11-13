@@ -1,4 +1,4 @@
-# HDInsight-Spark - High Availability and Disaster Recovery
+# HDInsight-Spark - Disaster Recovery
 
 [High availability](README.md#1--architectural-considerations-for-high-availability)<br>
 [Disaster recovery](DisasterRecovery.md)<br>
