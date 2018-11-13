@@ -1,233 +1,60 @@
-# HDInsight-Spark: Replication to DR datacenter on Azure with distcp - by example
+# HDInsight-Spark - High Availability and Disaster Recovery
 
-This sample covers DR for HDInsight Spark leveraging distcp.<br>
-In this example, we will provision HDInsight Spark and dependencies in US East 2 (primary) and US West 2 (secondary).  The following are steps to deploy and configure replication to DR.<br>
+[High availability](README.md#1--architectural-considerations-for-high-availability)<br>
+[Disaster recovery](DisasterRecovery.md)<br>
 
-## 1.  Primary datacenter - USEast2 - setup
+## 1.  Architectural considerations for High Availability 
 
-### 1.0.1. Provision resource group in USEast2
-Create a resource group.<br>
-![Create USE2 RG](images/1-create-rg.png)
-<br><br>
+HDInsight Spark service has many infrastructure and service components and when architectecting high availability of your application/solution, the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
 
-### 1.0.2. Provision a virtual network in the resource group
-![Create vnet 1](images/2-provision-vnet-1.png)
-<br><br>
-<hr>
+### 1.0.1. HDInsight platform infrastructure - storage
+HDInsight leverages a choice of Azure objects storage and Azure Data Lake Store for HDFS compatible storage system.<BR>
 
-![Create vnet 2](images/2-provision-vnet-2.png)
-<br><br>
-<hr>
+**Azure Blob Storage:**
+The storage service redundancy default is LRS (Locally Redundant Storage) and  automatically maintains 3 replicas of each object.  In the event of any failure, it serves up a replica, seamlessly.<BR>
+ 
+### 1.0.2. HDInsight platform infrastructure - compute
+Azure VMs have an SLA, as do HDInsight master and worker nodes.  To maintain the SLA, the HDInsight service actively montors the health of the nodes and replaces failied nodes automatically.  For the highest fault tolerance HDInsight places nodes across fault and update domains intelligently.
 
-![Create vnet 3](images/2-provision-vnet-3.png)
-<br><br>
-<hr>
+### 1.0.3. HDInsight platform infrastructure - metastore RDBMS
+HDInsight leverages Azure SQL Database for metastore RDBMS for Ambari, Hive & Oozie.  The service can provision a metastore for you, or you can provide a metastore at provision time.  This Azure SQL Database service automatically maintains 3 copies of data and serves up a replica in the event of a failure, seamlessly.
 
-![Create vnet 4](images/2-provision-vnet-4.png)
-<br><br>
-<hr>
+### 1.0.4. HDInsight platform component - gateway
+HDInsight service provides a HTTPS gateway to the cluster. The gateway presents SSL cert, handles cluster credentials validation, and also acts a reverse proxy to communicate with few Hadoop services running on the cluster. The gateway is highly-available out of the box in active-standby mode.  
 
-![Create vnet 5](images/2-provision-vnet-5.png)
-<br><br>
-<hr>
+### 1.0.5. Hadoop service component - master nodes
+There are several services in Hadoop that have a master-slave architecture.  For HA of masters, HDInsight comes with two master nodes, both active and the services distributes master roles in active and standby across the two nodes for maximizing FT.  The same are provisioned intelligently for maximum FT across fault and update domains.
 
-![Create vnet 6](images/2-provision-vnet-6.png)
-<br><br>
-<hr>
+### 1.0.6. Hadoop service component - Zookeeper
+Zookeeper is a distributed coordination service and is a foundational service.  HDInsight leverages 3 Zookeeper servers - the minimum recommended for HA.
 
-![Create vnet 7](images/2-provision-vnet-7.png)
-<br><br>
-<hr>
+### 1.0.7. Hadoop service component - HDFS
+HDFS namenode is enabled HA out of the box and the two instances primary and standby are distributed across the two master nodes.
 
+### 1.0.8. Hadoop service component - YARN
+YARN resource manager is enabled HA out of the box and the two instances primary and standby are distributed across the two master nodes.
 
-### 1.0.3. Provision HDInsight Spark in the resource group to use the Vnet
-![Create hdi 1](images/3-provision-hdi-1.png)
-<br><br>
-<hr>
+### 1.0.9. Hadoop service component - Hive
+The Hive services like Hive metastore, HiveServer2, Hive WebHCat server are all configured HA across the two master nodes.
 
-![Create hdi 2](images/3-provision-hdi-2.png)
-<br><br>
-<hr>
+### 1.0.10. Hadoop service component - Oozie
+Oozie server is configured HA across the two master nodes.
 
-![Create hdi 3](images/3-provision-hdi-3.png)
-<br><br>
-<hr>
+### 1.0.11. Hadoop service component - Spark2
+- Spark2 history server is not configured HA because the service does not support HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
+- Livy server supports remote REST based interaction with Spark2 service. Livy is not configured HA because the service does not support HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
+- Thrift server is configured HA across the two master nodes.
 
-![Create hdi 4](images/3-provision-hdi-4.png)
-<br><br>
-<hr>
+### 1.0.12. Hadoop service component - Notebook services 
+Notebok services Jupyter and Zepplin are not configured HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
 
-![Create hdi 5](images/3-provision-hdi-5.png)
-<br><br>
-<hr>
+### 1.0.13. Hadoop service component - Ambari
+Ambari is configured HA across the two master nodes.
 
-![Create hdi 6](images/3-provision-hdi-6.png)
-<br><br>
-<hr>
+### 1.0.14. What about distributed processing jobs submitted to the cluster?
+By default YARN attempts each task of each job 4 times, and if it fails on one node manager, will attempt on another.  A job is failed when all the 4 attempts fail for any task that is part of the job.  This number is configurable.
 
-![Create hdi 7](images/3-provision-hdi-7.png)
-<br><br>
-<hr>
+Additionally - the cluster services are constantly heartbeating to notify they are alive and when out of contact beyond configured threshold - will get blacklisted and no jobs are pushed to the same node managers.
 
-![Create hdi 8](images/3-provision-hdi-8.png)
-<br><br>
-<hr>
-
-### 1.0.3. Connect to the HDInsight Spark cluster - Ambari cluster manager
-![Create hdi 9](images/3-provision-hdi-9.png)
-<br><br>
-<hr>
-
-![Create hdi 10](images/3-provision-hdi-10.png)
-<br><br>
-<hr>
-
-![Create hdi 11](images/3-provision-hdi-11.png)
-<br><br>
-<hr>
-
-![Create hdi 12](images/3-provision-hdi-12.png)
-<br><br>
-<hr>
-
-### 1.0.4. Connect to the HDInsight Spark cluster - via SSH
-![Create hdi 13](images/3-provision-hdi-13.png)
-<br><br>
-<hr>
-
-![Create hdi 14](images/3-provision-hdi-14.png)
-<br><br>
-<hr>
-
-![Create hdi 15](images/3-provision-hdi-15.png)
-<br><br>
-<hr>
-
-## 2.  Secondary datacenter - USWest2 - setup
-
-Repeat the same steps in the secondary datacenter.<br>
-2.1. Create a resource group<br>
-2.2. Within the resource group, provision  virtual network with **address range that does not overlap with the virtual network in the primary datacenter**<br>
-2.3. Within the resource group, provision  HDInsight Spark within the virtual network created in 2.2
-
-## 3.  Global Vnet peering
-
-We will now peer the virtual networks of the primary and secondary datacenters.
-### 3.0.1. Peer the primary datacenter's vnet to the secondary datacenter's
-![Create vnet-peer-1](images/4-global-vnet-peering-1.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-2](images/4-global-vnet-peering-2.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-3](images/4-global-vnet-peering-3.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-4](images/4-global-vnet-peering-4.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-11](images/4-global-vnet-peering-11.png)
-<br><br>
-<hr>
-
-### 3.0.2. Peer the secondary datacenter's vnet to the primary datacenter's
-
-![Create vnet-peer-5](images/4-global-vnet-peering-5.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-6](images/4-global-vnet-peering-6.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-7](images/4-global-vnet-peering-7.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-8](images/4-global-vnet-peering-8.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-9](images/4-global-vnet-peering-9.png)
-<br><br>
-<hr>
-
-![Create vnet-peer-10](images/4-global-vnet-peering-10.png)
-<br><br>
-<hr>
-
-## 4.  Attach storage accounts for data to each custer
-
-### 4.1. Create storage account and attach to primary cluster
-
-##### 4.1.1. Create storage account
-![Create sa-1](images/5-create-storage-1.png)
-<br><br>
-<hr>
-
-![Create sa-2](images/5-create-storage-2.png)
-<br><br>
-<hr>
-
-Navigate to your storage account on the portal.  You will need the storage account keys for attaching to the cluster.
-![Create sa-5](images/5-create-storage-5.png)
-<br><br>
-<hr>
-
-Capture the account name and key.
-![Create sa-6](images/5-create-storage-6.png)
-<br><br>
-<hr>
-
-##### 4.1.2. Attach the storage account to the cluster with a HDInsight script action
-Naviate to the cluster on the Azure portal.
-![Create sa-3](images/5-create-storage-3.png)
-<br><br>
-<hr>
-
-Click on script action, and submit new.
-![Create sa-4](images/5-create-storage-4.png)
-<br><br>
-<hr>
-
-Select the first option for attaching a storage account, and paste the storage account name and key from section 4.1.1, separated by a space and create the script action.
-![Create sa-7](images/5-create-storage-7.png)
-<br><br>
-<hr>
-
-![Create sa-8](images/5-create-storage-8.png)
-<br><br>
-<hr>
-
-##### 4.1.3. Create storage containers in the storage account
-
-![Create sa-9](images/5-create-storage-9.png)
-<br><br>
-<hr>
-
-
-![Create sa-10](images/5-create-storage-10.png)
-<br><br>
-<hr>
-
-
-![Create sa-11](images/5-create-storage-11.png)
-<br><br>
-<hr>
-
-
-## 5.  Execute distcp
-
-## 6. Validate replication
-
-## 7. Other considerations
-
-
-
-
-
-
+## 2.  Architectural considerations for Disaster Recovery
+[Next](DisasterRecovery.md)
