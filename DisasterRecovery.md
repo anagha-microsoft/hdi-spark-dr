@@ -91,8 +91,17 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 ![8-compare-2](images/8-comparing-2.png)
 <hr>
 
-### 2.0.5.  Replication tooling supported in HDInsight
+### 2.0.5.  Replication tooling & considerations, specific to HDInsight
 #### 2.0.5.1.  Storage
+- distcp: Hadoop native replication utility
+- WANdisco fusion: ISV; Automated asynchronous replication
+- Azure Data Factory v2: Create a scheduled workflow to leverage distcp to replicate data from primary cluster to secondary datacenter; [Documentation for ADF for distcp](https://docs.microsoft.com/en-us/azure/data-factory/connector-hdfs#use-distcp-to-copy-data-from-hdfs)
 
 #### 2.0.5.2.  Metadata
+- WANdisco fusion: ISV; Automated synchronous replication
+- Azure Data Factory v2: Create a scheduled workflow to leverage ADFv2 SQL database connector to selectively replicate metadata from primary datacenter metastore RDBMS to secondary datacenter metastore RDBMS;  [Documentation for ADF for SQL database replication](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-database)
+
+**Considerations with ADFv2:**<br>
+- Remember to replace the location in table DDL appropriately to match secondary datacenter location
+- Run msck repair table to fix partitions
 
