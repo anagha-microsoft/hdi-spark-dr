@@ -8,7 +8,7 @@
 HDInsight Spark service has many infrastructure and service components and when architectecting high availability of your application/solution, the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
 
 ### 1.0.1. HDInsight platform infrastructure - storage
-HDInsight leverages a choice of Azure objects storage and Azure Data Lake Store for HDFS compatible storage system.<BR>
+HDInsight Spark leverages a choice of Azure object storage or Azure Data Lake Store for HDFS compatible storage system.<BR>
 
 **Azure Blob Storage:**
 The storage service redundancy default is LRS (Locally Redundant Storage) and  automatically maintains 3 replicas of each object.  In the event of any failure, it serves up a replica, seamlessly.<BR>
