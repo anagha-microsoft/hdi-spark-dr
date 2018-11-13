@@ -129,5 +129,5 @@ The RPO and RTO requirements (and needless to say, your budget) drive the DR arc
 3. Configure global Vnet peering
 <hr>
 
-### 2.0.7.  Show me how distcp is done
+### 2.0.7.  Show me, step-by-step, how distcp is done on Azure across datacenters
 [Next](distcp.md)
