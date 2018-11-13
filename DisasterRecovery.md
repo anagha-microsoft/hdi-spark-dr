@@ -10,6 +10,7 @@
   - [2.0.3.3. Active - DR cluster provisioned on-demand/as needed](DisasterRecovery.md#2033-active---dr-cluster-provisioned-on-demandas-needed)
   - [2.0.3.4. Active - Active with multi-master made possible by WANdisco](DisasterRecovery.md#2034-active---active-with-multi-master-made-possible-by-wandisco)
 - [2.0.4. Comparing the options]()
+- [2.0.5. Replication tooling & considerations, specific to HDInsight] (DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
 
 ## 2.  Architectural considerations for Disaster Recovery
 
