@@ -6,7 +6,7 @@
 - [2.0.2. What to replicate?](DisasterRecovery.md#202--what-to-replicate)
 - [2.0.3. Replication to DR - options](DisasterRecovery.md#203--replication-to-dr---options)
   - [2.0.3.1. Active - Hot standby with dual ingest and processing](DisasterRecovery.md#2031-active---hot-standby-with-dual-ingest-and-processing)
-  - [2.0.3.2. Active - Cold standby with scheduled/batch replication to DR]()
+  - [2.0.3.2. Active - Cold standby with scheduled/batch replication to DR](DisasterRecovery.md#2032-active---cold-standby-with-scheduledbatch-replication-to-dr)
   - [2.0.3.3. Active - DR cluster provisioned on-demand/as needed]()
   - [2.0.3.4. Active - Active with multi-master made possible by WANdisco]()
 
