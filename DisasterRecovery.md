@@ -14,7 +14,7 @@ This section focuses on disastery recovery for HDInsight Spark clusters.
 - [2.0.4. Comparing the options](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/DisasterRecovery.md#204--comparing-the-options)
 - [2.0.5. Replication tooling & considerations, specific to HDInsight](DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
   - [2.0.5.1. Storage](DisasterRecovery.md#2051--storage)
-  - [2.0.5.2. Metadata](DisasterRecovery.md#2051--storage)
+  - [2.0.5.2. Metadata](DisasterRecovery.md#2052--metadata)
   - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
 ## 2.  Architectural considerations for Disaster Recovery
 
