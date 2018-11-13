@@ -59,4 +59,4 @@ By default YARN attempts each task of each job 4 times, and if it fails on one n
 
 Additionally - the cluster services are constantly heartbeating to notify they are alive and when out of contact beyond configured threshold - will get blacklisted and no jobs are pushed to the same node managers.
 
-## 2.  Architectural considerations for Disaster Recover 
+## 2.  Architectural considerations for Disaster Recovery
