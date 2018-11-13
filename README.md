@@ -1,5 +1,8 @@
 # HDInsight-Spark - High Availability and Disaster Recovery
 
+High availability
+Disaster recovery
+
 ## 1.  Architectural considerations for High Availability 
 
 HDInsight Spark service has many infrastructure and service components and when architect high availability the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
