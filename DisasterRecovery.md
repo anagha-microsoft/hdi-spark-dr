@@ -16,6 +16,8 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 
 ### 2.0.2.  What to replicate? 
 
-
+![8-replicate-whatto](images/8-dr-repicate-what-to.png)
+<br><br>
+<hr>
 
 
