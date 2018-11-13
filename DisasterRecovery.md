@@ -108,4 +108,5 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Run msck repair table to fix partitions
 
 #### 2.0.5.3. WANdisco Fusion
-[Deck](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf)|[ISV website](https://www.wandisco.com/products)
+[Deck as of Fall 2018](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf)
+[ISV website](https://www.wandisco.com/products)
