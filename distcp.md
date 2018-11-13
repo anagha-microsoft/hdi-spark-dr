@@ -385,7 +385,7 @@ Output:
 Found 1 items
 -rw-r--r--   1 sshuser supergroup         12 2018-11-12 22:04 wasbs://staging@hdisparksdcdatasa.blob.core.windows.net/sampleFile.txt
 ```
-This concludes this section.  Review documentation on distcp for more advanced usecases.
+This concludes this section.  Review documentation on distcp for more advanced features.
 <hr>
 
 ## 6. References
