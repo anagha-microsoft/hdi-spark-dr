@@ -28,4 +28,8 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 #### 2.0.3.1. Active - Hot standby with dual ingest and processing
 ![8-replicate-option1](images/8-option-1-active-dual-ingest.png)
 <br><br>
+- Applications/integration processes write to both clusters
+- Both clusters run identical batch jobs
+- Standby cluster is offline for reads by applications and end users
+- Synchronization tasks need to be run to ensure clusters are in sync
 <hr>
