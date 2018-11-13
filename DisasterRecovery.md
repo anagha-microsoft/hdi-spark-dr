@@ -1,5 +1,5 @@
 # HDInsight-Spark - High Avaliability and Disaster Recovery
-This page focuses on disastery recovery for HDInsight Spark clusters.<BR><BR>
+This page focuses on disastery recovery for HDInsight Spark clusters.
 <hr>
   
 [1. High availability](README.md#1--architectural-considerations-for-high-availability)<br>
