@@ -1,3 +1,5 @@
-# HDInsight-Spark: High Availability and Disaster Recovery - Architectural considerations
+# HDInsight-Spark - High Availability and Disaster Recovery
+
+## Architectural considerations for High Availability 
 
 
