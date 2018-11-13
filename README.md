@@ -1,7 +1,7 @@
 # HDInsight-Spark - High Availability and Disaster Recovery
 
 [High availability](README.md#1--architectural-considerations-for-high-availability)<br>
-Disaster recovery<br>
+[Disaster recovery](DisasterRecovery.md)<br>
 
 ## 1.  Architectural considerations for High Availability 
 
@@ -57,3 +57,4 @@ By default YARN attempts each task of each job 4 times, and if it fails on one n
 Additionally - the cluster services are constantly heartbeating to notify they are alive and when out of contact beyond configured threshold - will get blacklisted and no jobs are pushed to the same node managers.
 
 ## 2.  Architectural considerations for Disaster Recovery
+[Next](DisasterRecovery.md)
