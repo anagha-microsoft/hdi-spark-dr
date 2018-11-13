@@ -11,8 +11,9 @@
   - [2.0.3.4. Active - Active with multi-master made possible by WANdisco](DisasterRecovery.md#2034-active---active-with-multi-master-made-possible-by-wandisco)
 - [2.0.4. Comparing the options](https://github.com/anagha-microsoft/hdi-spark-dr/blob/master/DisasterRecovery.md#204--comparing-the-options)
 - [2.0.5. Replication tooling & considerations, specific to HDInsight](DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
-  - [2.0.5.1. Active - Hot standby with dual ingest and processing](DisasterRecovery.md#2031-active---hot-standby-with-dual-ingest-and-processing)
-
+  - [2.0.5.1. Storage](DisasterRecovery.md#2051--storage)
+  - [2.0.5.2. Metadata](DisasterRecovery.md#2051--storage)
+  - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2051--storage)
 ## 2.  Architectural considerations for Disaster Recovery
 
 ### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replication automagically?
