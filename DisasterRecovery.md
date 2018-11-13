@@ -13,7 +13,7 @@
 - [2.0.5. Replication tooling & considerations, specific to HDInsight](DisasterRecovery.md#205--replication-tooling--considerations-specific-to-hdinsight)
   - [2.0.5.1. Storage](DisasterRecovery.md#2051--storage)
   - [2.0.5.2. Metadata](DisasterRecovery.md#2051--storage)
-  - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2051--storage)
+  - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
 ## 2.  Architectural considerations for Disaster Recovery
 
 ### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replication automagically?
