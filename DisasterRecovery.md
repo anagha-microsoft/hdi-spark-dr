@@ -18,7 +18,7 @@ This page focuses on disastery recovery for HDInsight Spark clusters.
   - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
 ## 2.  Architectural considerations for Disaster Recovery
 
-### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replication automagically?
+### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replicated automagically?
 Azure Blob Storage offers geographically redundant storage (GRS) and read access geographically redundant storage (RA-GRS).  The storage account has to be configured as GRS/RA-GRS at provision time.  <BR>
   
 **Consideration:**
