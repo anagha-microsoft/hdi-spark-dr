@@ -28,7 +28,7 @@ Azure Blob Storage offers geographically redundant storage (GRS) and read access
 - ONLY Microsoft can initiate DR, and only in the event of an *entire primary datacenter outage*. If you have a need for failover even if datacenter is not down - its not an option.
 - If your DR datacenter is other than an Azure paired datacenter - its not a viable option for you.
 
-**Therefore...**
+**Therefore...**<br>
 For most power, control, flexibility, manage your own replication to your DR datacenter.
 <hr>
 
@@ -39,7 +39,7 @@ The targeted duration of time and a service level within which a business proces
 [RPO - Recovery Point Objective](https://en.wikipedia.org/wiki/Recovery_point_objective)<br>
 A recovery point objective (RPO) is defined by business continuity planning. It is the maximum targeted period in which data might be lost from an IT service due to a major incident.<br><br>
 
-The RPO and RTO requirements (, and needless to say, your budget) drive the DR architecture for your HDInsight solution.
+The RPO and RTO requirements (and needless to say, your budget) drive the DR architecture for your HDInsight solution.
 <hr>
 
 ### 2.0.2.  What to replicate? 
@@ -103,6 +103,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated asynchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage distcp to replicate data from primary cluster to secondary datacenter; [Documentation for ADF for distcp](https://docs.microsoft.com/en-us/azure/data-factory/connector-hdfs#use-distcp-to-copy-data-from-hdfs)
 <hr>
+
 #### 2.0.5.2.  Metadata
 - [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated synchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage ADFv2 SQL database connector to selectively replicate metadata from primary datacenter metastore RDBMS to secondary datacenter metastore RDBMS;  [Documentation for ADF for SQL database replication](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-database)
@@ -111,7 +112,18 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Remember to replace the location in table DDL appropriately to match secondary datacenter location
 - Run msck repair table to fix partitions
 <hr>
+
 #### 2.0.5.3. WANdisco Fusion
 [Deck as of Fall 2018](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf)<br>
 [ISV website](https://www.wandisco.com/products)
 <hr>
+
+### 2.0.6.  Networking considerations
+
+#### 2.0.6.1. Both datacenters on Azure
+1. Cross region commuication is over private IPs only.  
+2. Ensure there are no overlapping IP addresses across clusters/ddatacenters
+3. Configure global Vnet peering
+
+### 2.0.7.  Show me how distcp is done
+Next
