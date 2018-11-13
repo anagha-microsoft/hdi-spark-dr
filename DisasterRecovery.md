@@ -131,6 +131,7 @@ The RPO and RTO requirements (and needless to say, your budget) drive the DR arc
 
 ### 2.0.7.  Show me, step-by-step, how distcp is done on Azure across datacenters
 [Next](distcp.md)
+<hr>
 
 ### Diagrams
 Want to take the diagrams and customize?  Find the PowerPoint deck [here](DR-Architecture-Options.pptx), with the diagrams in it.
