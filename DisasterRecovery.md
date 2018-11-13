@@ -1,4 +1,4 @@
-# HDInsight-Spark - Disaster Recovery
+# HDInsight-Spark - High Avaliability and Disaster Recovery
 
 [High availability](README.md#1--architectural-considerations-for-high-availability)<br>
 [Disaster recovery](DisasterRecovery.md)<br>
@@ -12,7 +12,7 @@ The targeted duration of time and a service level within which a business proces
 [RPO - Recovery Point Objective](https://en.wikipedia.org/wiki/Recovery_point_objective)<br>
 A recovery point objective (RPO) is defined by business continuity planning. It is the maximum targeted period in which data might be lost from an IT service due to a major incident.<br><br>
 
-The RPO and RTO requirements (, and of course, budget) drive the DR architecture for your HDInsight solution.
+The RPO and RTO requirements (, and needless to say, your budget) drive the DR architecture for your HDInsight solution.
 
 ### 2.0.2.  What to replicate? 
 
