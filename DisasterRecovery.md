@@ -100,7 +100,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Azure Data Factory v2: Create a scheduled workflow to leverage distcp to replicate data from primary cluster to secondary datacenter; [Documentation for ADF for distcp](https://docs.microsoft.com/en-us/azure/data-factory/connector-hdfs#use-distcp-to-copy-data-from-hdfs)
 
 #### 2.0.5.2.  Metadata
-- WANdisco fusion: ISV; Automated synchronous replication
+- [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated synchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage ADFv2 SQL database connector to selectively replicate metadata from primary datacenter metastore RDBMS to secondary datacenter metastore RDBMS;  [Documentation for ADF for SQL database replication](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-database)
 
 **Considerations with ADFv2:**<br>
