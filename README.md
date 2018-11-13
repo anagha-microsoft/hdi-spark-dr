@@ -1,11 +1,32 @@
 # HDInsight-Spark - High Availability and Disaster Recovery
 
-[High availability](README.md#1--architectural-considerations-for-high-availability)<br>
-[Disaster recovery](DisasterRecovery.md)<br>
+[1. High availability](README.md#1--architectural-considerations-for-high-availability)<br>
+[2. Disaster recovery](DisasterRecovery.md)<br>
+[3. Hands on lab for cross datacenter replication with distcp](distcp-lab.md)<br>
 
 ## 1.  Architectural considerations for High Availability 
 
-HDInsight Spark service has many infrastructure and service components and when architectecting high availability of your application/solution, the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
+HDInsight Spark service has many infrastructure and service components and when architectecting high availability of your application/solution, the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.<br>
+
+**Architectural considerations:**<br> 
+When planning HA for HDInsight Spark, the following are some considerations:<br> 
+
+1. Is the platform storage infrastructure HA?
+2. Is the platform compute infrastructure HA?
+3. Is the platform metastore RDBMS HA?
+4. Is the REST gateway HA?
+5. Are the master nodes HA?
+6. Do we have enough zookeepers and are they configured across fault/update domains?
+7. Is HDFS namenode configured HA?
+8. Is YARN resource manager configured HA?
+9. Are the components of Hive service configured HA?
+10. Is the Oozie server configured HA?
+11. Are the components associated with Spark2 service configured HA where possible?
+12. Is Ambari configured HA?
+13. Are the notebook services configured HA?
+<br>
+The following sections cover these very considerations.
+<hr>
 
 ### 1.0.1. HDInsight platform infrastructure - storage
 HDInsight Spark leverages a choice of Azure object storage or Azure Data Lake Store for HDFS compatible storage system.  The focus of this writeup is on Azure Blob Storage.  *Azure Data Lake Store (referred to as ADLS Gen 1) will eventually be deprecated in favor of Azure Data Lake Store Gen 2 - documentation updates shortly*.  <BR>
