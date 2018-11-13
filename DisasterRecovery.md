@@ -18,7 +18,7 @@ This section focuses on disastery recovery for HDInsight Spark clusters.
   - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
 - [2.0.6. Networking considerations](DisasterRecovery.md#206--networking-considerations)
   - [2.0.6.1. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
-- [2.0.7. Show me by example how to use distcp across Azure regions](DisasterRecovery.md#206--networking-considerations)
+- [2.0.7. Show me by example how to use distcp across Azure regions](DisasterRecovery.md#207--show-me-how-distcp-is-done)
 <hr>
 
 ## 2.  Architectural considerations for Disaster Recovery
