@@ -16,6 +16,8 @@ This section focuses on disastery recovery for HDInsight Spark clusters.
   - [2.0.5.1. Storage](DisasterRecovery.md#2051--storage)
   - [2.0.5.2. Metadata](DisasterRecovery.md#2052--metadata)
   - [2.0.5.3. About WANdisco Fusion](DisasterRecovery.md#2053-wandisco-fusion)
+<hr>
+
 ## 2.  Architectural considerations for Disaster Recovery
 
 ### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replicated automagically?
@@ -28,6 +30,7 @@ Azure Blob Storage offers geographically redundant storage (GRS) and read access
 
 **Therefore...**
 For most power, control, flexibility, manage your own replication to your DR datacenter.
+<hr>
 
 ### 2.0.1.  What is your SLA for Disaster Recovery?
 The SLA for disaster recovery can be covered under two popular acronyms -<br>
@@ -39,13 +42,11 @@ A recovery point objective (RPO) is defined by business continuity planning. It 
 The RPO and RTO requirements (, and needless to say, your budget) drive the DR architecture for your HDInsight solution.
 <hr>
 
-
 ### 2.0.2.  What to replicate? 
 
 ![8-replicate-whatto](images/8-dr-repicate-what-to.png)
 <br><br>
 <hr>
-
 
 ### 2.0.3.  Replication to DR - options
 
@@ -101,7 +102,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - [distcp](https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html): Hadoop native replication utility; Batch, incremental, overwritable; Runs on Mapreduce - number of mappers configurable
 - [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated asynchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage distcp to replicate data from primary cluster to secondary datacenter; [Documentation for ADF for distcp](https://docs.microsoft.com/en-us/azure/data-factory/connector-hdfs#use-distcp-to-copy-data-from-hdfs)
-
+<hr>
 #### 2.0.5.2.  Metadata
 - [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated synchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage ADFv2 SQL database connector to selectively replicate metadata from primary datacenter metastore RDBMS to secondary datacenter metastore RDBMS;  [Documentation for ADF for SQL database replication](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-database)
@@ -109,7 +110,8 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 **Considerations with ADFv2:**<br>
 - Remember to replace the location in table DDL appropriately to match secondary datacenter location
 - Run msck repair table to fix partitions
-
+<hr>
 #### 2.0.5.3. WANdisco Fusion
 [Deck as of Fall 2018](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf)<br>
 [ISV website](https://www.wandisco.com/products)
+<hr>
