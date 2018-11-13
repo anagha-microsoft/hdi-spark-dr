@@ -13,6 +13,17 @@
 
 ## 2.  Architectural considerations for Disaster Recovery
 
+### FAQ: Azure Blob Storage has geo-redundancy.  Do I really need further consideration?  Wont my data be replication automagically?
+Azure Blob Storage offers geographically redundant storage (GRS) and read access geographically redundant storage (RA-GRS).  The storage account has to be configured as GRS/RA-GRS at provision time.  <BR>
+  
+**Consideration:**
+- Both options above, replicate storage ONLY, asynchronously to an Azure *paired datacenter*. Need stronger consistency - not a viable option for you.
+- ONLY Microsoft can initiate DR, and only in the event of an *entire primary datacenter outage*. If you have a need for failover even if datacenter is not down - its not an option.
+- If your DR datacenter is other than an Azure paired datacenter - its not a viable option for you.
+
+**Therefore...**
+For most power, control, flexibility, manage your own replication to your DR datacenter.
+
 ### 2.0.1.  What is your SLA for Disaster Recovery?
 The SLA for disaster recovery can be covered under two popular acronyms -<br>
 [RTO - Recoverty Time Objective](https://en.wikipedia.org/wiki/Recovery_time_objective)<br>
@@ -79,3 +90,9 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 <br><br>
 ![8-compare-2](images/8-comparing-2.png)
 <hr>
+
+### 2.0.5.  Replication tooling supported in HDInsight
+#### 2.0.5.1.  Storage
+
+#### 2.0.5.2.  Metadata
+
