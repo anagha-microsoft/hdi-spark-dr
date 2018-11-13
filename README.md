@@ -29,6 +29,8 @@ This sample covers DR for HDInsight Spark leveraging distcp.  In this example, w
 - [5.2. Execute distcp - basics](README.md#52-execute-distcp---basics)<br>
 - [5.3. Validate replication](README.md#53-validate-replication)<br>
 
+[6. References](README.md#6-references)
+
 
 ## 1.  Primary datacenter - USEast2 - setup
 
