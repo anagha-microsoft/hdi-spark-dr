@@ -44,3 +44,13 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Its is not uncommon to have a storage dense, compute light DR cluster for cost optimization
 - RPO => Medium | RTO => Medium | Cost => High
 <hr>
+
+#### 2.0.3.3. Active - DR cluster provisioned on-demand/as needed
+![8-replicate-option3](images/8-option-3-active-don-demand-dr.png)
+<br><br>
+- Applications write to active-primary cluster, no DR cluster provisioned
+- Replication utilities synchronize data and metastore to cloud storage in DR datacenter
+- Administrator provisions cluster on-demand in DR datacenter
+- Synchronization tasks need to be run to ensure clusters are in sync
+ - RPO => Highest | RTO => Highest | Cost => Lowest
+<hr>
