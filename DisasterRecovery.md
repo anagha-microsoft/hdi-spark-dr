@@ -9,6 +9,7 @@
   - [2.0.3.2. Active - Cold standby with scheduled/batch replication to DR](DisasterRecovery.md#2032-active---cold-standby-with-scheduledbatch-replication-to-dr)
   - [2.0.3.3. Active - DR cluster provisioned on-demand/as needed](DisasterRecovery.md#2033-active---dr-cluster-provisioned-on-demandas-needed)
   - [2.0.3.4. Active - Active with multi-master made possible by WANdisco](DisasterRecovery.md#2034-active---active-with-multi-master-made-possible-by-wandisco)
+- [2.0.4. Comparing the options]()
 
 ## 2.  Architectural considerations for Disaster Recovery
 
@@ -39,7 +40,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Both clusters run identical batch jobs
 - Standby cluster is offline for reads by applications and end users
 - Synchronization tasks need to be run to ensure clusters are in sync
-- RPO => Low/None | RTO => None | Cost => High
+- RPO => Low/None | RTO => Low/None | Cost => High
 <hr>
 
 #### 2.0.3.2. Active - Cold standby with scheduled/batch replication to DR
@@ -48,6 +49,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Applications write to active-primary ONLY
 - Replication to DR cluster is incremental, batch, scheduled
 - Synchronization tasks need to be run to ensure clusters are in sync
+- Only curated data is copied over, no processing jobs are run
 - Its is not uncommon to have a storage dense, compute light DR cluster for cost optimization
 - RPO => Medium | RTO => Medium | Cost => High
 <hr>
@@ -69,5 +71,5 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Both clusters run identical batch jobs
 - Synchronization tasks need to be run to ensure clusters are in sync
 - WANdisco fusion supports automated metadata replication (sync) and data replication (async), scheduling, monitoring, alerting, bandwidth throttling and more
- - RPO => Lowest | RTO => Lowest | Cost => Highest | Effort => Lowest
+ - RPO => Lowest/None | RTO => Lowest/None | Cost => Highest | Effort => Lowest
 <hr>
