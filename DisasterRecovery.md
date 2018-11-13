@@ -32,4 +32,5 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 - Both clusters run identical batch jobs
 - Standby cluster is offline for reads by applications and end users
 - Synchronization tasks need to be run to ensure clusters are in sync
+- RPO => Low/None | RTO => None | Cost => High
 <hr>
