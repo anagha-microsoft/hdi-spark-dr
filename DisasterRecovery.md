@@ -95,7 +95,7 @@ The RPO and RTO requirements (, and needless to say, your budget) drive the DR a
 
 ### 2.0.5.  Replication tooling & considerations, specific to HDInsight
 #### 2.0.5.1.  Storage
-- [distcp](https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html): Hadoop native replication utility
+- [distcp](https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html): Hadoop native replication utility; Batch, incremental, overwritable; Runs on Mapreduce - number of mappers configurable
 - [WANdisco fusion](images/WANdisco%20Fusion_Technical%20Product%20Overview_FALL2018b.pdf): ISV; Automated asynchronous replication
 - Azure Data Factory v2: Create a scheduled workflow to leverage distcp to replicate data from primary cluster to secondary datacenter; [Documentation for ADF for distcp](https://docs.microsoft.com/en-us/azure/data-factory/connector-hdfs#use-distcp-to-copy-data-from-hdfs)
 
