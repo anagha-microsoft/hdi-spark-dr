@@ -5,7 +5,7 @@
 
 ## 1.  Architectural considerations for High Availability 
 
-HDInsight Spark service has many infrastructure and service components and when architect high availability the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
+HDInsight Spark service has many infrastructure and service components and when architectecting high availability of your application/solution, the following are the considerations.  To level-set, high-availability as referenced in this section has to do with *fault tolerance within the same datacenter*.
 
 ### 1.0.1. HDInsight platform infrastructure - storage
 HDInsight leverages a choice of Azure objects storage and Azure Data Lake Store for HDFS compatible storage system.<BR>
