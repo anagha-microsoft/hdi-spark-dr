@@ -134,4 +134,4 @@ The RPO and RTO requirements (and needless to say, your budget) drive the DR arc
 <hr>
 
 ### Diagrams
-Want to take the diagrams and customize?  Find the PowerPoint deck [here](DR-Architecture-Options.pptx), with the diagrams in it.
+Want to take the diagrams and customize?  Find the PowerPoint deck [here](docs/diagrams.pptx), with the diagrams in it.
