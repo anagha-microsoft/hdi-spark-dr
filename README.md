@@ -62,12 +62,12 @@ The Hive services like Hive metastore, HiveServer2, Hive WebHCat server are all 
 Oozie server is configured HA across the two master nodes.
 
 ### 1.0.11. Hadoop service component - Spark2
-- Spark2 history server is not configured HA because the service does not support HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
-- Livy server supports remote REST based interaction with Spark2 service. Livy is not configured HA because the service does not support HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
+- Spark2 history server is not configured HA but is on the roadmap.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
+- Livy server supports remote REST based interaction with Spark2 service. Livy is not configured HA but is on the roadmap.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
 - Thrift server is configured HA across the two master nodes.
 
 ### 1.0.12. Hadoop service component - Notebook services 
-Notebok services Jupyter and Zepplin are not configured HA.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
+Notebok services Jupyter and Zepplin are not configured HA, but are on the roadmap.  In the event of a failure, you can attempt recover or deploy the component on a different node. 
 
 ### 1.0.13. Hadoop service component - Ambari
 Ambari is configured HA across the two master nodes.
